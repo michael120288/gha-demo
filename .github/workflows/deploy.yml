@@ -10,9 +10,9 @@ jobs:
   test:
     env:
       PORT: 8001
-      MONGODB_CLUSTER_ADDRESS: cluster0.8zhnmva.mongodb.net
-      MONGODB_USERNAME: michael
-      MONGODB_PASSWORD: tGs19VpqkSX7xSkN
+      MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
